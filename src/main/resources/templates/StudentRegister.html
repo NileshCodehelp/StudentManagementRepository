@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org/">
 <head>
-<title>Insert title here</title>
+<title>Student Registration</title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 </head>
@@ -9,11 +9,11 @@
 	<div class="container">
 		<div class="card">
 			<div class="card-header bg-primary text-white">
-				<h3>EMPLOYEE REGISTER PAGE</h3>
+				<h3>Student REGISTER PAGE</h3>
 			</div>
 			<div class="card-body">
-				<form th:action="@{/employee/save}" method="POST"
-					th:object="${employee}">
+				<form th:action="@{/student/save}" method="POST"
+					th:object="${student}">
 					<input type="hidden" th:field="*{id}">
 					<div class="row">
 						<div class="col-2">
@@ -23,23 +23,41 @@
 							<input type="text" th:field="*{name}" class="form-control" />
 						</div>
 					</div>
-
+                <br>
 					<div class="row">
 						<div class="col-2">
-							<label>SALARY</label>
+							<label>ADDRESS</label>
 						</div>
 						<div class="col-4">
-							<input type="text" th:field="*{salary}" class="form-control" />
+							<input type="text" th:field="*{address}" class="form-control" />
 						</div>
 					</div>
-
+				<br>
+					<div class="row">
+						<div class="col-2">
+							<label>FEEPAID</label>
+						</div>
+						<div class="col-4">
+							<input type="text" th:field="*{feepaid}" class="form-control" />
+						</div>
+					</div>
+				<br>	
+					<div class="row">
+						<div class="col-2">
+							<label>COURSE</label>
+						</div>
+						<div class="col-4">
+							<input type="text" th:field="*{course}" class="form-control" />
+						</div>
+					</div>
+                <br>
 					<div class="row">
 						<div class="col-2"></div>
 						<div class="col-4">
 							<img th:src="*{'data:image/png;base64,'+ image}" />
 						</div>
 					</div>
-
+                <br>
 					<div class="row">
 						<div class="col-2">CAPTCHA</div>
 						<div class="col-4">
@@ -47,8 +65,9 @@
 							<input type="hidden" th:field="*{hidden}" />
 						</div>
 					</div>
-					<input type="submit" value="Add Employee" class="btn btn-success" />
-						| <a th:href="@{/employee/all}" class="btn btn-info">VIEW ALL</a>
+					<br>
+					<input type="submit" value="ADD Student" class="btn btn-success" />
+						| <a th:href="@{/student/all}" class="btn btn-info">VIEW ALL</a>
 				</form>
 				<br/>
 				<div th:if="${message!=null}">

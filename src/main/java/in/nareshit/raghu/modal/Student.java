@@ -9,12 +9,14 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Employee {
+public class Student {
 	@Id
 	@GeneratedValue
 	private Integer id;
 	private String name;
-	private Double salary;
+	private String address;
+	private Double feepaid;
+	private String course;
 	@Transient
 	private String captcha;
 	@Transient
