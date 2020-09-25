@@ -23,7 +23,7 @@ import in.nareshit.raghu.service.IStudentService;
 import in.nareshit.raghu.service.LoginServiceMgmt;
 
 @Controller
-@RequestMapping("/student")
+@RequestMapping()
 public class StudentController {
 
 	@Autowired
@@ -60,7 +60,7 @@ public class StudentController {
 	
 	
 
-	@GetMapping("/register")
+	@GetMapping("/")
 	public String showRegister(Model model) {
 		Student s  = new Student();
 		setupCaptcha(s);
