@@ -12,7 +12,7 @@
 				<h3>Student REGISTER PAGE</h3>
 			</div>
 			<div class="card-body">
-				<form th:action="@{/student/save}" method="POST"
+				<form th:action="@{/save}" method="POST"
 					th:object="${student}">
 					<input type="hidden" th:field="*{id}">
 					<div class="row">
@@ -67,7 +67,7 @@
 					</div>
 					<br>
 					<input type="submit" value="ADD Student" class="btn btn-success" />
-						| <a th:href="@{/student/all}" class="btn btn-info">VIEW ALL</a>
+						| <a th:href="@{/all}" class="btn btn-info">VIEW ALL</a>
 				</form>
 				<br/>
 				<div th:if="${message!=null}">
