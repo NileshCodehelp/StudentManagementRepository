@@ -29,14 +29,14 @@
 						<td th:text="${ob.course}"></td>
 						
 						<td>
-							<a th:href="@{/student/edit/{id}(id=${ob.id})}" class="btn btn-warning">EDIT --</a>
+							<a th:href="@{/edit/{id}(id=${ob.id})}" class="btn btn-warning">EDIT --</a>
 						</td>
 					</tr>
 				</table>
 			</div>
 		</div>
 		<br/>
-		<a th:href="@{/student/register}" class="btn btn-info">ADD</a>
+		<a th:href="@{/register}" class="btn btn-info">ADD</a>
 	</div>
 </body>
 </html>
