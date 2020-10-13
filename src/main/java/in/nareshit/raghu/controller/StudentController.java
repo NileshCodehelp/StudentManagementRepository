@@ -61,7 +61,8 @@ public class StudentController {
 	
 
 	@GetMapping("/")
-	public String showRegister(Model model) {
+	public String showRegister(Model model) { 
+             System.out.println("-----show Register Handler method ");
 		Student s  = new Student();
 		setupCaptcha(s);
 		model.addAttribute("student", s);
