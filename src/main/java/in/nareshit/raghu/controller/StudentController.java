@@ -74,6 +74,7 @@ public class StudentController {
 			@ModelAttribute("student") Student student,
 			Model model) 
 	{
+             System.out.println("add sop in save student method ");
 		String page="";
 		if(student.getCaptcha().equals(student.getHidden()))
 		{
