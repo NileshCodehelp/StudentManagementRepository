@@ -15,6 +15,7 @@ import cn.apiclub.captcha.text.renderer.DefaultWordRenderer;
 public interface CaptchaUtils {
 	
 	public static Captcha createCaptcha(int width, int height) {
+               //OK no problem fix 
 		return new Captcha.Builder(width, height)
 				.addBackground(new GradiatedBackgroundProducer())
 				.addText(new DefaultTextProducer(), new DefaultWordRenderer())
